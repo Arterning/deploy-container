@@ -7,7 +7,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - "$PWD/.pgdata/data:/var/lib/postgresql/data/pgdata"
+      - "$HOME/.docker/pgdata/data:/var/lib/postgresql/data/pgdata"
     environment:
       POSTGRES_PASSWORD: root #postgres@root
       PGDATA: /var/lib/postgresql/data/pgdata
