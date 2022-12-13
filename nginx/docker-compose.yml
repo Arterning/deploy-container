@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nginx:
+    restart: always
+    image: nginx:latest
+    ports:
+      - "100:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    container_name: root_nginx
