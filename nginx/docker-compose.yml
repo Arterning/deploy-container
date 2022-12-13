@@ -8,4 +8,16 @@ services:
       - "100:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./cert:/etc/nginx/cert
+      - ./log:/var/log/nginx
+    links:
+      - vaultwarden:vaultwarden
     container_name: root_nginx
+  vaultwarden:
+    image: vaultwarden/server:latest
+    ports:
+      - "101:80"
+    volumes:
+      - ./vw-data/:/data/
+    container_name: vaultwarden
