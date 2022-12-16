@@ -6,8 +6,8 @@ services:
     ports:
       - 27017:27017
     volumes:
-    - "$HOME/.docker/data/configdb:/data/configdb"
-    - "$HOME/.docker/data/db:/data/db"
+    - "../data/mongo/data/configdb:/data/configdb"
+    - "../data/mongo/data/db:/data/db"
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root

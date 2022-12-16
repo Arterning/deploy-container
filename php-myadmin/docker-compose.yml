@@ -10,9 +10,9 @@ services:
       MYSQL_USER: ${DB_USER}
       MYSQL_PASSWORD: ${DB_USER_PASS}
     ports:
-      - "6033:3306"
+      - "3306:3306"
     volumes:
-      - "$HOME/.docker/m-mysql:/var/lib/mysql"
+      - "../data/mysql:/var/lib/mysql"
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: pma

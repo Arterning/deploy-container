@@ -7,7 +7,7 @@ services:
     tty: true
     volumes:
       #Modify following line
-      - $HOME/.docker/sqlite3:/root/db/
+      - ../data/sqlite3:/root/db/
     ports:
       - '9000:9000' # expose ports - HOST:CONTAINER
     restart: unless-stopped
