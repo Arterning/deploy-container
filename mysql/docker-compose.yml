@@ -6,8 +6,8 @@ services:
       - "3306:3306"
     container_name: mysql_ning
     volumes:
-      - "$HOME/.docker/mysql/data:/var/lib/mysql" # 挂载数据目录
-      - "$HOME/.docker/mysql/config:/etc/mysql/conf.d" # 挂载配置文件目录
+      - "../data/mysql/data:/var/lib/mysql" # 挂载数据目录
+      - "../data/mysql/config:/etc/mysql/conf.d" # 挂载配置文件目录
     environment:
       MYSQL_ROOT_PASSWORD: root #root@root
-      MYSQL_DATA_BASE: ning
+      MYSQL_DATA_BASE: pass
